@@ -16,7 +16,7 @@ The `DUT` directory includes the following VHDL modules:
 
 *   **`MIPS.vhd`**: This is the top-level entity of the MIPS processor. It instantiates and connects all the other pipeline stages and components of the processor.
 *   **`IFETCH.vhd`**: The Instruction Fetch (IF) stage. Responsible for fetching the next instruction from the instruction memory based on the Program Counter (PC).
-*   **`IDECODE.vhd`**: The Instruction Decode (ID) stage. This module decodes the fetched instruction, reads operands from the register file, and handles sign extension of immediate values.
+*   **`IDECODE.vhd`**: The Instruction Decode (ID) stage. This module decodes the fetched instruction, reads operands from the register file, and handles sign extension of immediate values. It also appears to manage the Writeback (WB) stage, writing results back to the register file.
 *   **`EXECUTE.vhd`**: The Execute (EX) stage. Performs arithmetic and logical operations as specified by the instruction, using an Arithmetic Logic Unit (ALU). It also calculates branch target addresses.
 *   **`DMEMORY.vhd`**: The Data Memory (MEM) stage. Handles memory access instructions like Load Word (LW) and Store Word (SW). It reads from or writes to the data memory.
 *   **`CONTROL.VHD`**: The Control Unit. Generates all necessary control signals for the datapath based on the instruction's opcode and function code. These signals dictate the operation of other modules in each pipeline stage.
